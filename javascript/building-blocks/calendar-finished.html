@@ -19,7 +19,7 @@
         width: 25%;
         border: 2px solid white;
         padding: 5px;
-        height: 80px;
+        height: 50px;
         background-color: #4A2DB6;
         color: white;
       }
@@ -52,6 +52,7 @@
       const select = document.querySelector('select');
       const list = document.querySelector('ul');
       const h1 = document.querySelector('h1');
+      const li1 = document.querySelector('li')
 
       select.onchange = function() {
         const choice = select.value;
@@ -61,6 +62,7 @@
           days = 28;
         } else if(choice === 'April' || choice === 'June' || choice === 'September' || choice === 'November') {
           days = 30;
+          li1.style.backgroundColor = 'black';
         }
 
         createCalendar(days, choice);
